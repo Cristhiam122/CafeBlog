@@ -21,6 +21,7 @@ body {
     font-family: var(--fuenteParrafos);
     font-size: 1.6rem;
     line-height: 2;
+    text-align: justify;
 
 }
 
@@ -146,6 +147,7 @@ img {
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 2rem;
+    border: none;
 }
 .boton--primario {
     background-color: var(--negro);
@@ -153,6 +155,9 @@ img {
 
 .boton--secundario {
     background-color: var(--primario);
+}
+.boton:hover {
+    cursor: pointer;
 }
 
 .cursos {
@@ -168,14 +173,14 @@ img {
     margin-bottom: none;
 }
 
-.widget-curso__label {
+.widget-curso__label, .curso__label {
     font-family: var(--fuenteheading);
     font-weight: bold;
     font-size: 2rem;
 }
 
 
-.widget-curso__info {
+.widget-curso__info, .curso__info {
     font-weight: normal;
     font-size: 2rem;
 }
@@ -194,4 +199,76 @@ img {
     background-size: cover;
     padding: 0 15rem 3rem 15rem;
 
+}
+
+/** Nosotros.html **/
+
+@media (min-width: 768px) {
+    .sobre-nosotros {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+        
+    }
+
+}
+
+/** Cursos **/
+
+.curso {
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--primario);
+
+}
+
+.curso:last-of-type {
+    border-bottom: none;
+
+}
+
+@media (min-width: 768px) {
+    .curso {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
+}
+
+/** Contacto **/
+
+.contacto-bg {
+    background-image: url(../img/contacto.jpg);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.formulario {
+    background-color: var(--blanco);
+    margin: -5rem auto 0 auto;
+    width: 95%;
+    padding: 5rem;
+
+}
+
+.campo {
+    display: flex;
+    margin-bottom: 2rem;
+    gap: 2rem;
+}
+
+.campo__label {
+    flex: 0 0 9rem;
+    text-align: right;
+    
+
+}
+
+.campo__field {
+    flex: 1;
+    border: 1px solid var(--primario);
+}
+
+.campo__field--textarea {
+    height: 20rem;
 }
